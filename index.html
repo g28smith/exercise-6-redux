@@ -5,15 +5,25 @@
   <title>Exercise 5: CSS Layout</title>
   <meta charset="utf-8">
   <style>
+    
+    * { box-sizing: border-box;}
+    
     body {
       margin: 0;
       padding: 20px;
       line-height: 1.6;
+      font-family: georgia, serif;
     }
 
     header {
       padding: 30px;
-      margin-bottom: 0;
+      background-color: lightblue;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    
+    h1 , h2 {
+      font-family: arial, sans-serif;
     }
 
     header h1 {
@@ -25,11 +35,20 @@
       padding: 5px 15px;
       font-size: 0.8em;
       font-weight: bold;
+      background-color: orange;
+      border-radius: 10px;
+      width: 125px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
     }
 
     #main-content {
-      padding: 0;
       vertical-align: top;
+      background-color: lightgrey;
+      padding: 20px 40px 20px 20px;
+      width: 65%;
+      display: inline-block;
     }
 
     #main-content h2 {
@@ -41,8 +60,13 @@
     }
 
     #sidebar {
-      padding: 20px;
+      padding: 30px;
       vertical-align: top;
+      background-color: darkblue;
+      color: white;
+      width: 30%;
+      display: inline-block;
+      margin-left: 4%;
     }
 
     #sidebar h3 {
@@ -57,11 +81,16 @@
 
     #sidebar li {
       padding: 8px 0;
+      border-bottom: white 1px solid;
     }
 
     footer {
-      padding: 20px;
-      margin-top: 20px;
+      padding: 5px;
+      background-color: black;
+      color: white;
+      text-align: center;
+      position: sticky;
+      bottom: 0;
     }
   </style>
 </head>
